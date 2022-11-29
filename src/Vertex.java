@@ -1,24 +1,14 @@
 public class Vertex {
     // Out represents the outgoing cell, the cell being left behind.
-    private int outX, outY, outWall;
+    private final int outWall;
     // In represents the ingoing cell, the cell being entered.
-    private int inX, inY, inWall;
+    private final int inX, inY, inWall;
 
-    Vertex(int outX, int outY, int ouWall, int inX, int inY, int inWall) {
-        this.outX = outX;
-        this.outY = outY;
-        this.outWall = outWall;
+    Vertex(int inX, int inY, int inWall, int outWall) {
         this.inX = inX;
         this.inY = inY;
         this.inWall = inWall;
-    }
-
-    public int getOutX() {
-        return outX;
-    }
-
-    public int getOutY() {
-        return outY;
+        this.outWall = outWall;
     }
 
     public int getOutWall() {

@@ -4,7 +4,7 @@ public class Cell {
     * 1   2
     * \ 3 /
     */
-    private boolean[] walls;
+    private final boolean[] walls;
     private boolean accessed;
     private final int x, y;
 
@@ -30,5 +30,16 @@ public class Cell {
 
     public int getY() {
         return y;
+    }
+
+    public String getTop() {
+        return "X" + (walls[3] ? "X" : " ") + "X";
+    }
+    public String getMid() {
+        return (walls[1] ? "X" : " ") + " "  + (walls[2] ? "X" : " ");
+    }
+
+    public String getBottom() {
+        return "X" + (walls[0] ? "X" : " ") + "X";
     }
 }
